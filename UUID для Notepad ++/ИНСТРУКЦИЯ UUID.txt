@@ -1,0 +1,34 @@
+1. Добавить (если не установлен) Plugin Manager. 
+	1.Зайти на сайт разработчика 
+	https://github.com/bruderstein/nppPluginManager/releases и скачать версию плагина для х64 системы
+	2. Извлекаем из скаченного архива Plugin Manager в директорию 
+	C:\Program Files\Notepad++\plugins\PythonScript\scripts
+	3. Перезапустить Notepad++
+
+_______________________________
+	
+ЕСЛИ УСТАНОВЛЕН PLUGIN MANAGER
+_______________________________
+
+2. Установить плагин Python Script через Plugin Manager.
+3. Добавить скрипт Generation UUID.py в директорию:
+	Если установлена версия Notepad x32:
+	C:\Program Files (x86)\Notepad++\plugins\PythonScript\scripts
+	
+	Если установлена версия Notepad x64:
+	C:\Program Files\Notepad++\plugins\PythonScript\scripts
+
+4. Запустить Notepad++.
+5. Перейти (Плагины->Python Script->Configuration...) 
+6. Выбрать Mashine Scripts 
+7. Выбрать скрипт Generation UUID
+8. Нажать ADD и добавить скрипт в панель меню и панель инструментов
+9. Нажать ОК
+10. Перезапустить Notepad++, соответствующая кнопка появится на панели инструментов
+11. Назначить скрипту сочетание клавиш в меню (Опции->Горячие клавиши)
+12. Найти Generation UUID в разделе Plugin commands и назначить удобное сочетание клавиш
+13. Чтобы добавить скрипт в контекстное меню Notepad++, нужно в xml-файл настроек (Опции->Редакт.Контекстное Меню) добавить в нужном месте (например, перед первым элементом Вырезать "<Item MenuEntryName="Edit" MenuItemName="Cut"/>") следующие строчки:
+
+	<Item PluginEntryName="Python Script" PluginCommandItemName="Generation UUID"  ItemNameAs="Генерация UUID"/>
+<Item id="0"/>
+14. Теперь для того чтобы сгенерировать уникальный UUID для выбранного документа, достаточно либо нажать на соответствующую кнопку на панели инструментов, либо выбрать "Генерация UUID" в контекстном меню, либо использовать настроенное сочетание клавиш на данное действие.
